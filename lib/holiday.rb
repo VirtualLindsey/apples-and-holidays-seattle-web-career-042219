@@ -70,7 +70,9 @@ def all_supplies_in_holidays(holiday_hash)
     new_season = season.slice(0,1).capitalize + season.slice(1..-1) +":"
     puts new_season
     new_line = "  "
-    holiday.each do |name.to_s, supply.to_s|
+    holiday.each do |name, supply|
+      name = name.to_s
+  
       s = name.split("_")
       proper_name = ""
       
