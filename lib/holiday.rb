@@ -90,8 +90,8 @@ def all_supplies_in_holidays(holiday_hash)
         (1...supply.length).each do |i|
           new_line += ", " + supply[i]
         end
-        puts new_line
       end  
+      puts new_line
     end
   end
 
