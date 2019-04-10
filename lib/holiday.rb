@@ -73,11 +73,14 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |name, supply|
       s = name.split("_")
       proper_name = ""
+      
       s.each do |i|
         proper_name += i.slice(0,1).capitalize + i.slice(1..-1) + " "
       end
-      proper_name.trim
-      new_line += name.slice(0,1).capitalize + name.slice(1..-1) + ": "
+      
+      proper_name = proper_name.rstrip
+      new_line += proper_name + ": "
+      
       if supply.length == 1
           new_line += supply[0].slice(0,1).capitalize + supply[0].slice(1..-1)
       else
