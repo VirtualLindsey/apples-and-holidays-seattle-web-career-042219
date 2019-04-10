@@ -86,9 +86,9 @@ def all_supplies_in_holidays(holiday_hash)
       if supply.length == 1
           new_line += supply[0]
       else
-        new_line += supply[0].slice(0,1).capitalize + supply[0].slice(1..-1)
+        new_line += supply[0]
         (1...supply.length).each do |i|
-          new_line += ", " + supply[i].slice(0,1).capitalize + supply[i].slice(1..-1)
+          new_line += ", " + supply[i]
         end
         puts new_line
       end  
